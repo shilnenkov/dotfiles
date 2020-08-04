@@ -22,6 +22,14 @@ curl -L git.io/antigen > zsh/.antigen/antigen.zsh
 echo ""
 
 echo "Create symbols links"
-stow vim tmux zsh
+# stow vim tmux zsh
+ln -sf ${PWD}/tmux/.tmux ${HOME}/.tmux
+ln -sf ${PWD}/tmux/.tmux.conf ${HOME}/.tmux.conf
+
+ln -sf ${PWD}/vim/.vim ${HOME}/.vim
+ln -sf ${PWD}/vim/.vimrc ${HOME}/.vimrc
 echo "Use 'PlugInstall' to install Vim plugins"
+
+ln -sf ${PWD}/zsh/.antigen ${HOME}/.antigen
+ln -sf ${PWD}/zsh/.zshrc ${HOME}/.zshrc
 

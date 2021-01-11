@@ -9,6 +9,7 @@ antigen bundle command-not-found
 antigen bundle git
 antigen bundle git-extras
 antigen bundle tmux
+antigen bundle pip
 
 antigen bundle zsh-users/zsh-autosuggestions
 antigen bundle zsh-users/zsh-completions

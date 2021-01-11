@@ -1,0 +1,40 @@
+#!/usr/bin/env python
+
+import os
+import rlcompleter
+
+try:
+    import readline 
+    import atexit
+except ImportError as e:
+    print(".pythonrc :: Module not available: {}".format(e))
+    exit()
+
+# Autocomplection
+readline.parse_and_bind("tab: complete")
+print(".pythonrc :: AutoCompletion Loaded")
+
+# History
+
+history_file = os.path.join(os.path.expanduser("~"), ".pyhistory")
+print(".pythonrc :: history file: {}".format(history_file))
+
+
+def save_history(history=history_file):
+    import readline
+    readline.write_history_file(history)
+    print(".pythonrc :: history saved to {}".format(history))
+
+
+def load_history(history=history_file):
+    try:
+        readline.read_history_file(history)
+    except IOError:
+        pass
+
+
+load_history()
+atexit.register(save_history)
+
+del readline, rlcompleter, atexit, history_file
+

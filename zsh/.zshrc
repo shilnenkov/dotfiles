@@ -21,3 +21,7 @@ antigen theme win0err/aphrodite-terminal-theme aphrodite
 # Tell Antigen that you're done.
 antigen apply
 
+# sources, aliases, env variables
+
+export GDBHISTFILE="${HOME}/.gdb_history"
+

@@ -44,3 +44,6 @@ ln -sf ${PWD}/zsh/.zshrc ${HOME}/.zshrc
 ln -sf ${PWD}/python/.pythonrc ${HOME}/.pythonrc
 echo "Use 'echo "export PYTHONSTARTUP=~/.pythonrc" >> ~/.profile' to use it at startup"
 
+#gdb
+ln -sf ${PWD}/gdb/.gdbinit ${HOME}/.gdbinit
+

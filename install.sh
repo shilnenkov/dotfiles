@@ -47,3 +47,6 @@ echo "Use 'echo "export PYTHONSTARTUP=~/.pythonrc" >> ~/.profile' to use it at s
 #gdb
 ln -sf ${PWD}/gdb/.gdbinit ${HOME}/.gdbinit
 
+# i3
+cd ${PWD}/i3 && bash install.sh
+

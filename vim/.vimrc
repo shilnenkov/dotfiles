@@ -36,6 +36,7 @@ set smartcase
 set ignorecase
 set incsearch
 set showmatch
+set hlsearch
 
 " indention
 set smartindent

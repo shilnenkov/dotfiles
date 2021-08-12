@@ -1,0 +1,8 @@
+#/usr/bin/env bash
+
+if [ "$(xrandr | grep 'HDMI-1 connected')" ]; then
+    xrandr --output HDMI-1 --auto --above eDP-1 --output eDP-1 --auto --primary
+else
+    xrandr --auto
+fi
+

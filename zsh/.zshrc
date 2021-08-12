@@ -8,6 +8,7 @@ antigen bundle colored-man-pages
 antigen bundle command-not-found
 antigen bundle git
 antigen bundle git-extras
+antigen bundle pip
 antigen bundle tmux
 antigen bundle pip
 
@@ -22,6 +23,9 @@ antigen theme win0err/aphrodite-terminal-theme aphrodite
 antigen apply
 
 # sources, aliases, env variables
-
 export GDBHISTFILE="${HOME}/.gdb_history"
+export CHROOT="$HOME/chroot"
+export GDBHISTFILE="${HOME}/.gdb_history"
+
+alias hybrid_nvidia='__NV_PRIME_RENDER_OFFLOAD=1 __GLX_VENDOR_LIBRARY_NAME=nvidia __VK_LAYER_NV_optimus=NVIDIA_only'
 

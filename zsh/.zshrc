@@ -22,6 +22,10 @@ antigen theme win0err/aphrodite-terminal-theme aphrodite
 antigen apply
 
 # sources, aliases, env variables
+source ${HOME}/.tool_aliases.sh
 
 export GDBHISTFILE="${HOME}/.gdb_history"
+export PYTHONSTARTUP=~/.pythonrc
+
+alias cbcp="xclip -selection clipboard"
 

@@ -77,3 +77,4 @@ install_ubuntu() {
 
 install_${OS}
 
+# i3status-rust clipit

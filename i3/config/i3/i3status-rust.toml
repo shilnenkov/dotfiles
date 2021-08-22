@@ -29,9 +29,9 @@ block = "battery"
 driver = "upower"
 format = "{percentage}"
 
-# [[block]]
-# block = "pacman"
-# format = "{pacman} {aur}"
-# aur_command = "checkupdates-aur"
-# hide_when_uptodate = true
+[[block]]
+block = "pacman"
+format = "{pacman} {aur}"
+aur_command = "checkupdates-aur"
+hide_when_uptodate = true
 

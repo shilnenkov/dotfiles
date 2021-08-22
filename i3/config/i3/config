@@ -316,9 +316,9 @@ mode "$exit" {
 # Autostart applications
 exec --no-startup-id refresh_display_layout
 exec --no-startup-id compton --config ~/.config/compton.conf -b
-# exec --no-startup-id megasync
-# exec --no-startup-id deluge
-# exec --no-startup-id optimus-manager-qt
+exec --no-startup-id megasync
+exec --no-startup-id deluge
+exec --no-startup-id optimus-manager-qt
 exec --no-startup-id blueman-applet
 exec --no-startup-id ${HOME}/app/Telegram/Telegram -startintray
 exec --no-startup-id xsettingsd

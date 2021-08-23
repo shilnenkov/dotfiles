@@ -194,8 +194,8 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 # "dummy" bar
 bar {
-    status_command i3status-rs ${HOME}/.config/i3/i3status-rust.toml
-    # status_command ${HOME}/.cargo/bin/i3status-rs ${HOME}/.config/i3/i3status-rust.toml
+    # status_command i3status-rs ${HOME}/.config/i3/i3status-rust.toml
+    status_command ${HOME}/.cargo/bin/i3status-rs ${HOME}/.config/i3/i3status-rust.toml
 
     height 24
     mode dock
@@ -332,10 +332,10 @@ exec --no-startup-id blueman-applet
 exec --no-startup-id ${HOME}/app/Telegram/Telegram -startintray
 exec --no-startup-id xsettingsd
 exec --no-startup-id xautolock -time 30 -locker "i3lock -t -i ${HOME}/.config/i3/wallpapers/manjaro-cat.jpg"
-# exec --no-startup-id slack -us
+exec --no-startup-id slack -us
 # exec --no-startup-id xfce4-power-manager
 exec --no-startup-id redshift-gtk -l 59.937500:30.308611 -t 6500:3000
 exec --no-startup-id clipit
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
-# exec_always --no-startup-id google-drive-ocamlfuse ~/gdrive
+exec_always --no-startup-id google-drive-ocamlfuse ~/gdrive
 

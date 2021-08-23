@@ -35,7 +35,7 @@ format = "{percentage}"
 # aur_command = "checkupdates-aur"
 # hide_when_uptodate = true
 
-# [[block]]
-# block = "apt"
-# format = "{count}"
+[[block]]
+block = "apt"
+format = "{count}"
 

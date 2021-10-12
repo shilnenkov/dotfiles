@@ -57,7 +57,7 @@ install_ubuntu() {
     sudo apt-get install -y xsettingsd
 
     # Autostart applications
-    sudo apt-get install -y blueman clipit
+    sudo apt-get install -y blueman clipit redshift-gtk
 
     # lightdm
     sudo apt-get install -y lightdm libpam-kwallet4 libpam-kwallet5

@@ -1,8 +1,32 @@
-#/usr/bin/env bash
+#!/usr/bin/env bash
 
-if [ "$(xrandr | grep 'HDMI-1 connected')" ]; then
-    xrandr --output HDMI-1 --auto --above eDP-1 --output eDP-1 --auto --primary
-else
-    xrandr --auto
+set -e
+
+MAIN_DISPLAY=(--output eDP-1 --auto --primary)
+FIRST_DISPLAY=()
+SECOND_DISPLAY=()
+
+# First external display layout
+if [ "$(xrandr | grep -w 'HDMI-1 connected')" ]; then
+    FIRST_DISPLAY=(--output HDMI-1 --auto --above eDP-1)
 fi
 
+# Second external display layout
+if [ "$(xrandr | grep -w 'DP-1 connected')" ]; then
+    SECOND_DISPLAY=(--output DP-1 --auto --rotate right --left-of eDP-1)
+
+    if [ -n "${FIRST_DISPLAY}" ]; then
+        SECOND_DISPLAY+=(--left-of HDMI-1)
+    fi
+fi
+
+EXTERNAL_DYSPLAYS=(${FIRST_DISPLAY[@]} ${SECOND_DISPLAY[@]})
+
+if [ -n "${EXTERNAL_DYSPLAYS}" ]; then
+    XRANDR_OPTIONS=("${MAIN_DISPLAY[@]}" "${EXTERNAL_DYSPLAYS[@]}")
+else
+    XRANDR_OPTIONS=(--auto)
+fi
+
+echo "xrandr options: ${XRANDR_OPTIONS[@]}"
+xrandr "${XRANDR_OPTIONS[@]}"

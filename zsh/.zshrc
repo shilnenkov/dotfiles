@@ -14,6 +14,7 @@ antigen bundle pip
 antigen bundle zsh-users/zsh-autosuggestions
 antigen bundle zsh-users/zsh-completions
 antigen bundle zsh-users/zsh-syntax-highlighting
+antigen bundle bilelmoussaoui/flatpak-zsh-completion
 
 # Load the theme.
 antigen theme win0err/aphrodite-terminal-theme aphrodite

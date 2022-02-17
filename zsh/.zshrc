@@ -6,6 +6,8 @@ antigen use oh-my-zsh
 # Bundles
 antigen bundle colored-man-pages
 antigen bundle command-not-found
+antigen bundle docker
+antigen bundle docker-compose
 antigen bundle git
 antigen bundle git-extras
 antigen bundle tmux

@@ -30,5 +30,15 @@ source ${HOME}/.tool_aliases.sh
 export GDBHISTFILE="${HOME}/.gdb_history"
 export PYTHONSTARTUP=~/.pythonrc
 
+# golang
+GOROOT="/usr/local/go"
+GOPATH="${HOME}/.go"
+PATH="${PATH}:${GOROOT}/bin:${GOPATH}/bin"
+
 alias cbcp="xclip -selection clipboard"
+
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 

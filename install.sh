@@ -18,7 +18,7 @@ echo ""
 
 echo "Preparing Zsh..."
 mkdir -p zsh/.antigen
-curl -L git.io/antigen > zsh/.antigen/antigen.zsh
+curl -L git.io/antigen-nightly > zsh/.antigen/antigen.zsh
 echo ""
 
 echo "Prepearing Python..."

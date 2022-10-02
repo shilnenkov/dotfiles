@@ -1,3 +1,4 @@
+ZSH_DISABLE_COMPFIX="true"
 source $HOME/.antigen/antigen.zsh
 
 # Load the oh-my-zsh's library.
@@ -24,4 +25,11 @@ antigen apply
 # sources, aliases, env variables
 
 export GDBHISTFILE="${HOME}/.gdb_history"
+
+if [[ $(uname) == "Darwin" ]]; then
+    PATH="/opt/homebrew/opt/qt@5/bin:${PATH}"
+    PATH="${HOME}/Library/Python/3.8/bin:${PATH}"
+    FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
+    export PATH FPATH
+fi
 

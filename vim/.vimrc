@@ -16,8 +16,8 @@ colorscheme minimalist
 " Global preferences
 set nu
 set termencoding=utf-8
-set clipboard=unnamedplus
-"set clipboard=unnamed
+"set clipboard=unnamedplus
+set clipboard=unnamed
 
 " Remember info about open buffers on close
 set viminfo^=%

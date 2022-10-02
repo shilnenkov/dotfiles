@@ -23,8 +23,8 @@ echo ""
 
 echo "Prepearing Python..."
 # 'readline' module for Python 2
-sudo apt-get install libncurses5-dev
-sudo -H pip2 install readline
+# sudo apt-get install libncurses5-dev
+# sudo -H pip2 install readline
 
 echo "Creating symbols links..."
 # tmux
@@ -48,5 +48,5 @@ echo "Use 'echo "export PYTHONSTARTUP=~/.pythonrc" >> ~/.profile' to use it at s
 ln -sf ${PWD}/gdb/.gdbinit ${HOME}/.gdbinit
 
 # i3
-cd ${PWD}/i3 && bash install.sh
+# cd ${PWD}/i3 && bash install.sh
 

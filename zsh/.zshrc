@@ -31,6 +31,8 @@ export GDBHISTFILE="${HOME}/.gdb_history"
 if [[ $(uname) == "Darwin" ]]; then
     PATH="/opt/homebrew/opt/qt@5/bin:${PATH}"
     PATH="${HOME}/Library/Python/3.8/bin:${PATH}"
+    PATH="/opt/homebrew/opt/sqlite/bin:$PATH"
+    PATH="/usr/local/share/dotnet:${PATH}"
     FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
     export PATH FPATH
 fi

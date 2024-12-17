@@ -1,2 +1,6 @@
 *.un~
+tmux/plugins
+vim/autoload
+vim/plugged
+zsh/oh-my-zsh
 

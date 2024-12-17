@@ -1,0 +1,34 @@
+# Load the oh-my-zsh library.
+#
+export ZSH="$HOME/.dotfiles/zsh/oh-my-zsh"
+ZSH_THEME=aphrodite
+
+# Bundles
+plugins=(
+    colored-man-pages
+    command-not-found
+    docker
+    docker-compose
+    git
+    git-extras
+    tmux
+    pip
+    zsh-autosuggestions
+    zsh-completions
+    zsh-syntax-highlighting
+)
+
+source $ZSH/oh-my-zsh.sh
+
+# Environment variables
+
+export GDBHISTFILE="${HOME}/.gdb_history"
+
+if [[ $(uname) == "Darwin" ]]; then
+    PATH="/opt/homebrew/opt/qt@5/bin:${PATH}"
+    PATH="/opt/homebrew/opt/sqlite/bin:$PATH"
+    PATH="/usr/local/share/dotnet:${PATH}"
+    FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
+    export PATH FPATH
+fi
+

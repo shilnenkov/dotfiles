@@ -8,6 +8,9 @@ Plug 'dikiaap/minimalist'
 " Initialize plugin system
 call plug#end()
 
+" Load functions
+source ~/.vim/functions/selectionstatus.vim
+
 " highlighting
 set t_Co=256
 syntax on
@@ -48,4 +51,8 @@ set expandtab
 set mouse=a
 
 filetype indent on
+
+" Status
+set laststatus=2
+set statusline=%f%m%r%h%w\ %=%{SelectionStatus()}\ %l:%c%V\ %P
 
